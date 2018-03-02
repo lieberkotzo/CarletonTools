@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+<head>
+<title> Special Tools </title>
+<!--<link rel="stylesheet" href="content://com.android.providers.downloads.documents/document/raw%3A%2Fstorage%2Femulated%2F0%2FDownload%2FTools%2Ftools.css">
+<script src="content://com.android.providers.downloads.documents/document/raw%3A%2Fstorage%2Femulated%2F0%2FDownload%2FTools%2Ftools.js"></script>
+-->
+<script>
+function sayles() {
+var currentWeek = document.forms["SaylesCalc"]["weeks"].value;
+var saylesLeft = 75-(currentWeek * 7.5);
+var output = "You should have " + saylesLeft + " Sayles dollars left by Sunday."
+document.getElementById("answer").innerHTML = output
+document.getElementById("link").innerHTML = "Check your OneCard balance."
+}
+</script>
+	
+<style>
+button {
+background-color: rgb(70,164,226);
+font-size: 50px;
+padding: 14px 40px;
+border-radius: 0;
+box-shadow: 0;
+font-family: avenir, helvetica;
+margin: 1cm;
+border: 2px solid rgb(70,164,226);
+margin-bottom: 2cm;
+
+}
+
+button:hover {
+	background-color: rgba(70,164,226,0.4);
+	border: 2px solid rgb(70,164,226);
+	color: black;
+	
+}
+
+p {
+	font-family: avenir, helvetica;
+	font-size: 50px;
+	margin-top: 0;
+	margin-bottom: 0;
+	padding-top: 0;
+	padding-bottom: 0;
+	margin-left: 1cm;
+}
+
+input {
+	font-family: avenir, helvetica;
+	padding: 10px 10px;
+	width: 5cm;
+	border-radius: 0;
+	border: 2px solid rgb(70,164,226);
+	font-size: 50px;
+	background-color: rgba(70,164,226,0.2);
+	margin: 1cm;
+	width: 13.75cm;
+}
+
+a {
+	font-family: avenir, helvetica;
+	font-size: 50px;
+	margin-top: 0;
+	margin-bottom: 0;
+	padding-top: 0;
+	padding-bottom: 0;
+	margin-left: 1cm;
+	text-decoration: none;
+	color: rgb(70,164,226);
+}
+
+</style>
+</head>
+
+<body>
+<p> What week is it? </p?
+<p><form name="SaylesCalc">
+<input type="number" name="weeks"></input>
+<div><button type="button" onclick="sayles()" ontap="sayles()"> Calculate Sayles Left </button></div>
+</form></p>
+<br>
+<p id="answer"> </p>
+<a id="link" href="https://apps.carleton.edu/campus/onecard/dashboard/"> </a>
+
+</body>
+</html>
